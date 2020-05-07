@@ -63,7 +63,7 @@ contract supplyChain{
  * @param _from_address :  The Address of Origin
  * @param _to_address :  The Address of Destination
  * @param _secretPhrase :  The secret phrase attached to the Load of Vaccine
- * @param _receiver :  Ethereum address of the receiver
+ * @param _receiver :  Ethereum address of the Receiver
  */
     function sendLoad(uint256 _vaccine_units, string memory _from_address, string memory _to_address,string memory _secretPhrase,address _receiver) public
     {
