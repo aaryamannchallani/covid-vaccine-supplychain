@@ -37,6 +37,26 @@ contract supplyChain{
         require(msg.sender==admin,"Only Admin has access to this function");_;
     }
 
+    event load_Sent(
+        uint32 load_number,
+        uint256 vaccine_units,
+        string from,
+        string to,
+        address Receiver
+        );
+
+    event distributer_Set(
+        address distributer
+        );
+
+    event receiver_Set(
+        address receiver);
+
+    event load_Received(
+        uint32 load_number
+        );
+
+
 /**
  * 
  * @param  _vaccine_units :  Number of Vaccine Units being loads_sent
@@ -57,6 +77,7 @@ contract supplyChain{
         Vaccine.sender=msg.sender;
         Vaccine.receiver=_receiver;
         vaccine_loads.push(loads_sent);
+        emit load_Sent(loads_sent,_vaccine_units,_from_address,_to_address,_receiver);
     }
 /**
  * 
@@ -73,7 +94,9 @@ contract supplyChain{
         require(msg.sender==load[_load_number].receiver,"Invalid Receiver");
         load[_load_number].Load_Received=true;
         loads_received++;
+        emit load_Received(_load_number);
         return(load[_load_number].Load_Received);
+
     }
 /**
  * 
@@ -81,6 +104,7 @@ contract supplyChain{
  */
     function setDistributer(address _address) onlyAdmin() public{
         distributers.push(_address);
+        emit distributer_Set(_address);
     }
 /**
  * 
@@ -88,6 +112,7 @@ contract supplyChain{
  */
     function setReceiver(address _address) onlyAdmin() public{
         receivers.push(_address);
+        emit receiver_Set(_address);
     }
 /**
  * 
