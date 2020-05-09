@@ -1,18 +1,18 @@
-/**
- *Submitted for verification at Etherscan.io on 2020-04-20
-*/
+
 
 /**
  * Created on:  20/04/2020
+ * First Update: 07/05/2020
+ * Second Update: 09/05/2020
  * @summary: This is a supply chain management smart contract that overcomes the pitfalls of unsecure supply chains
  * @author: Aaryamann Challani
  */
-pragma solidity ^0.6.0;
+pragma solidity 0.6.7;
 
 contract supplyChain{
     uint32 public loads_sent=0;
     uint32 public loads_received=0;
-    address admin;
+    address private admin;
     struct Load{
         uint256 vaccine_units;
         string from_address;
@@ -22,8 +22,8 @@ contract supplyChain{
         address sender;
         address receiver;
     }
-    mapping(uint32=>Load) load;
-    uint32[] vaccine_loads;
+    mapping(uint32=>Load) private load;
+    uint32[] private vaccine_loads;
     address[] public distributers;
     address[] public receivers;
 
@@ -63,7 +63,7 @@ contract supplyChain{
  * @param _from_address :  The Address of Origin
  * @param _to_address :  The Address of Destination
  * @param _secretPhrase :  The secret phrase attached to the Load of Vaccine
- * @param _receiver :  Ethereum address of the Receiver
+ * @param _receiver :  Ethereum address of the receiver
  */
     function sendLoad(uint256 _vaccine_units, string memory _from_address, string memory _to_address,string memory _secretPhrase,address _receiver) public
     {
