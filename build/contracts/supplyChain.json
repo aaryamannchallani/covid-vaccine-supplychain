@@ -93,7 +93,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -112,7 +113,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -125,7 +127,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -138,7 +141,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -157,7 +161,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -259,7 +264,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -278,7 +284,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.6.7+commit.b8d736ae\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"distributer\",\"type\":\"address\"}],\"name\":\"distributer_Set\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"load_number\",\"type\":\"uint32\"}],\"name\":\"load_Received\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint32\",\"name\":\"load_number\",\"type\":\"uint32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"vaccine_units\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"from\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"to\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"address\",\"name\":\"Receiver\",\"type\":\"address\"}],\"name\":\"load_Sent\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"receiver\",\"type\":\"address\"}],\"name\":\"receiver_Set\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"admin\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"checkDistributer\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"checkReceiver\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"_load_number\",\"type\":\"uint32\"},{\"internalType\":\"string\",\"name\":\"_secretPhrase\",\"type\":\"string\"}],\"name\":\"confirmLoadReceived\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"distributers\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"loads_received\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"loads_sent\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"receivers\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_vaccine_units\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"_from_address\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_to_address\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_secretPhrase\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"_receiver\",\"type\":\"address\"}],\"name\":\"sendLoad\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"setDistributer\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_address\",\"type\":\"address\"}],\"name\":\"setReceiver\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"checkDistributer(address)\":{\"params\":{\"_address\":\": Ethereum Address of distributer\"},\"returns\":{\"_0\":\": true/false depending on the nature of given address\"}},\"checkReceiver(address)\":{\"params\":{\"_address\":\":  Ethereum Address of receiver\"},\"returns\":{\"_0\":\": true/false depending on the nature of given address\"}},\"confirmLoadReceived(uint32,string)\":{\"params\":{\"_load_number\":\":  Load Number of the Vaccine Load\",\"_secretPhrase\":\":  secret phrase to match with that of the secret phrase of the load\"},\"returns\":{\"_0\":\":\"}},\"sendLoad(uint256,string,string,string,address)\":{\"params\":{\"_from_address\":\":  The Address of Origin\",\"_receiver\":\":  Ethereum address of the receiver\",\"_secretPhrase\":\":  The secret phrase attached to the Load of Vaccine\",\"_to_address\":\":  The Address of Destination\",\"_vaccine_units\":\":  Number of Vaccine Units being loads_sent\"}},\"setDistributer(address)\":{\"params\":{\"_address\":\":  Ethereum Address of distributer\"}},\"setReceiver(address)\":{\"params\":{\"_address\":\":  Ethereum Address of Receiver\"}}}},\"userdoc\":{\"methods\":{\"checkDistributer(address)\":{\"notice\":\"\\r\"},\"checkReceiver(address)\":{\"notice\":\"\\r\"},\"confirmLoadReceived(uint32,string)\":{\"notice\":\"\\r\"},\"constructor\":\"\\r\",\"sendLoad(uint256,string,string,string,address)\":{\"notice\":\"\\r\"},\"setDistributer(address)\":{\"notice\":\"\\r\"},\"setReceiver(address)\":{\"notice\":\"\\r\"}}}},\"settings\":{\"compilationTarget\":{\"/C/Users/Aaryamann/Documents/GitHub/covid-vaccine-supplychain/contracts/supplyChain.sol\":\"supplyChain\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Aaryamann/Documents/GitHub/covid-vaccine-supplychain/contracts/supplyChain.sol\":{\"keccak256\":\"0xb92c06cdefdf4e82b5ed2213ccef5ce288e058e6c5e68a151085b4c5493c2a77\",\"urls\":[\"bzz-raw://73a37322b1d3edacc379387d5984391571d1d9ce04edaf2cbb6ca51b009a5fd9\",\"dweb:/ipfs/QmQxkbqTwzQAMzZGq1W9YXshc7RTVnq4AaRn3nR1PPPrKs\"]}},\"version\":1}",
@@ -10490,12 +10497,13 @@
         }
       },
       "links": {},
-      "address": "0x7372E324658d70a4D999487C6c07df69A44d0B20",
-      "transactionHash": "0x3f80212c364f5a752422a05a8b8ce4769fdfb696ac3f614e94cb2d5995afa1fc"
+      "address": "0xDfE261696D6f03C05f9fFB7a96932329eF3888d3",
+      "transactionHash": "0xc571e5f04a607ae2d9dbcf1fb71ca960d2a14814a2fa2878bce75412363805a3"
     }
   },
   "schemaVersion": "3.1.0",
-  "updatedAt": "2020-05-24T09:03:11.779Z",
+  "updatedAt": "2020-05-24T10:45:36.479Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {
       "checkDistributer(address)": {
