@@ -12,7 +12,7 @@ pragma solidity 0.6.7;
 contract supplyChain{
     uint32 public loads_sent=0;
     uint32 public loads_received=0;
-    address private admin;
+    address public admin;
     struct Load{
         uint256 vaccine_units;
         string from_address;
