@@ -127,5 +127,19 @@ contract('supplyChain', function (accounts) {
     });
   });
 
+  it("Should allow an Address to be a Receiver and Distributer",function(){
+    let a=false;
+    let b=false;
+    scinstance.setDistributer(accounts[4]).then(function (result){
+      a=true;
+    });
+    scinstance.setReceiver(accounts[4]).then(function (result){
+      b=true;
+    });
+    if(a==b==true){
+      return assert(true);
+    }
+  });
+
 
 });
